@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<PureHome
+  history={
+    Object {
+      "push": [MockFunction],
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <img
+      alt="logo-light"
+      className="logo"
+      src="logo-light.png"
+    />
+    <div
+      className="search-container"
+    >
+      <input
+        className="search-input"
+        onChange={[Function]}
+        placeholder="Enter a venue..."
+        value=""
+      />
+      <Button
+        align="right"
+        onClick={[Function]}
+        theme="dark"
+      >
+        <button
+          className="button right dark"
+          onClick={[Function]}
+        >
+          SEARCH
+        </button>
+      </Button>
+    </div>
+  </div>
+</PureHome>
+`;

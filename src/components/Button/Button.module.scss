@@ -1,0 +1,24 @@
+@import '../../constants/colors';
+
+.button {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+
+.right {
+    float: right;
+}
+
+.dark {
+    background-color: $black;
+    color: $white;
+}

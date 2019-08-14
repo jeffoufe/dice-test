@@ -1,0 +1,36 @@
+@import '../../constants/colors';
+
+.container {
+    padding-top: 20vh
+}
+
+.logo {
+    width: 200px;
+}
+
+.search {
+    &-container {
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        max-width: 1000px;
+        width: 70vw;
+    }
+
+    &-input {
+        border: 1px solid $black;
+        outline: none;
+        font-size: 20px;
+        height: 40px;
+        width: 100%;
+        margin: 10px 0 20px;;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    &-button {
+        background-color: black;
+        color: white;
+        padding: 10 20px;
+    }
+}
