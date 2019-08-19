@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Featured renders correctly 1`] = `
+<div
+  className="text  "
+>
+  text
+</div>
+`;
+
+exports[`Featured renders correctly 2`] = `
+<div
+  className="header-blue inline }"
+>
+  blue header
+</div>
+`;
+
+exports[`Featured renders correctly 3`] = `
+<div
+  className="header-grey  }"
+>
+  grey header
+</div>
+`;
+
+exports[`Featured renders correctly 4`] = `
+<div
+  className="important  }"
+>
+  important text
+</div>
+`;

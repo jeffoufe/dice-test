@@ -4,19 +4,39 @@ exports[`renders without crashing 1`] = `
 <div
   className="App"
 >
-  <BrowserRouter>
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/events"
-      />
-    </Switch>
-  </BrowserRouter>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <BrowserRouter>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(withRouter(PureEvents))",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/events"
+        />
+      </Switch>
+    </BrowserRouter>
+  </Provider>
 </div>
 `;

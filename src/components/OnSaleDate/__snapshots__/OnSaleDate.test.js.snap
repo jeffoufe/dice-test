@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnSaleDate renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="date"
+  >
+    On sale 19 Aug 9:54 PM
+  </div>
+</div>
+`;

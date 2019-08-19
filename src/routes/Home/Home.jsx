@@ -34,7 +34,7 @@ export const PureHome = ({ history }: PureHomeProps) => {
                     align='right'
                     onClick={() => {
                         if (search) {
-                            history.push('/events')}
+                            history.push(`/events?venue=${search}`)}
                         }
                     }
                 >

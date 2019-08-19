@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders correctly 1`] = `
+<div>
+  <BlueHeader>
+    test
+  </BlueHeader>
+  <div
+    className="list-entry"
+    key="list-entry-0"
+  >
+    <Text
+      inline={true}
+    >
+      primary
+    </Text>
+  </div>
+  <div
+    className="list-entry"
+    key="list-entry-1"
+  >
+    <Text
+      inline={true}
+    >
+      primary
+    </Text>
+    <ImportantText
+      inline={true}
+    >
+       － 
+      secondary
+    </ImportantText>
+  </div>
+  <div
+    className="list-entry"
+    key="list-entry-2"
+  >
+    <Text
+      inline={true}
+    >
+      primary
+    </Text>
+    <ImportantText
+      inline={true}
+    >
+       － 
+      secondary
+    </ImportantText>
+    <GreyHeader
+      inline={true}
+    >
+       Sold out
+    </GreyHeader>
+  </div>
+</div>
+`;

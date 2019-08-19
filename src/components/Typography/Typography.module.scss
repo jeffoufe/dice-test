@@ -1,0 +1,46 @@
+@import '../../constants/colors';
+
+.text {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.inline {
+    display: inline;
+}
+
+.important {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.blue-title {
+    font-size: 14px;
+    margin: 20px 0;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $blue;
+    letter-spacing: 0.05em;
+}
+
+.header {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-top: 20px;
+    text-transform: uppercase;
+
+    &-blue {
+        @extend .header;
+        color: $blue;
+    }
+
+    &-grey {
+        @extend .header;
+        color: $black;
+        opacity: 0.5;
+    }
+}

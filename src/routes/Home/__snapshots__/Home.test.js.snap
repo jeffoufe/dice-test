@@ -31,7 +31,7 @@ exports[`Home renders correctly 1`] = `
         theme="dark"
       >
         <button
-          className="button right dark"
+          className="button-dark right"
           onClick={[Function]}
         >
           SEARCH

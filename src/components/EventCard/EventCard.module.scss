@@ -1,0 +1,47 @@
+@import '../../constants/_colors';
+
+.container {
+    display: inline-block;
+    width: 320px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    &-landscape {
+        height: 160px;
+    }
+}
+
+.date {
+    margin-top: 8px;
+}
+
+.name {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 10px;
+}
+
+.actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+
+    &-from {
+        color: $black;
+        opacity: 0.5;
+        margin-bottom: 5px;
+    }
+
+    &-value {
+        color: $black;
+        font-size: 32px;
+    }
+}

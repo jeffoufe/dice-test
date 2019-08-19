@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoreInfo renders correctly 1`] = `
+<div
+  className="container"
+>
+  <ImportantText>
+    More info
+    <div
+      className="expand"
+    >
+      +
+    </div>
+  </ImportantText>
+  <Text
+    className="description"
+  >
+    description
+  </Text>
+  <List
+    list={
+      Array [
+        Object {
+          "primary": "artist",
+          "secondary": "8PM",
+        },
+        Object {
+          "primary": "artist2",
+          "secondary": "7AM",
+        },
+      ]
+    }
+    title="line up"
+  />
+  <List
+    list={
+      Array [
+        Object {
+          "primary": "general",
+          "secondary": "£7.46",
+          "tertiary": false,
+        },
+        Object {
+          "primary": "backstage",
+          "secondary": "£7.64",
+          "tertiary": true,
+        },
+      ]
+    }
+    title="tickets"
+  />
+</div>
+`;
