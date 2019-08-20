@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ImportantText, Text } from '../../components/Typography/Typography';
 import List from '../../components/List/List';
 import styles from './MoreInfo.module.scss';
@@ -17,6 +17,8 @@ type MoreInfoProps = {
 };
 
 const MoreInfo = ({ description, lineup, ticket_types, currency }: MoreInfoProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+
     const lineupList = lineup.map((lineupEntry: LineUpEntry) => ({
         primary: lineupEntry.details,
         secondary: lineupEntry.time
@@ -29,10 +31,10 @@ const MoreInfo = ({ description, lineup, ticket_types, currency }: MoreInfoProps
     }));
 
     return (
-        <div className={styles.container}>
+        <div className={styles[isOpen ? 'container-open' : 'container']}>
             <ImportantText>
                 More info
-                <div className={styles.expand}>+</div>
+                <div className={styles.expand} onClick={() => setIsOpen(!isOpen)}>+</div>
             </ImportantText>
             <Text className={styles.description}>{description}</Text>
             <List title='line up' list={lineupList} />

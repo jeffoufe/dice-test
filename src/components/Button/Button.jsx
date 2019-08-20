@@ -7,14 +7,16 @@ type ButtonProps = {
     children: React.Node,
     theme?: 'dark' | 'blue' | 'disabled',
     onClick?: () => void,
-    align?: 'left' | 'right'
+    align?: 'left' | 'right',
+    className?: string
 }
 
-const Button = ({ children, theme, onClick, align }: ButtonProps) => {
-    const className = `button-${theme || 'blue'}`;
+const Button = ({ children, theme, onClick, align, className }: ButtonProps) => {
+    const themeClassName = `button-${theme || 'blue'}`;
+    const alignClassName = align === 'right' ? styles.right : '';
     return (
         <button
-            className={`${styles[className]} ${styles[align || 'left']}`}
+            className={`${styles[themeClassName]} ${alignClassName} ${className || ''}`}
             onClick={onClick}
         >
             {children}

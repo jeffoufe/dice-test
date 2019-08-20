@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events renders correctly 1`] = `
+<Fragment>
+  <Connect(withRouter(Header)) />
+  <div
+    className="container"
+  >
+    <EventCard
+      apple_music_tracks={Array []}
+      currency="GBP"
+      date="date"
+      description="description"
+      event_images={
+        Object {
+          "landscape": "landscape",
+          "square": "square",
+        }
+      }
+      featured={false}
+      key="event-card-0"
+      lineup={Array []}
+      location={
+        Object {
+          "city": "city",
+          "country": "country",
+        }
+      }
+      name="name"
+      sale_start_date="2019-08-19"
+      sold_out={false}
+      spotify_tracks={Array []}
+      ticket_types={
+        Array [
+          Object {
+            "price": Object {
+              "total": 800,
+            },
+          },
+          Object {
+            "price": Object {
+              "total": 400,
+            },
+          },
+        ]
+      }
+      url="url"
+      venue="venue"
+    />
+    <EventCard
+      apple_music_tracks={Array []}
+      currency="GBP"
+      date="date"
+      description="description"
+      event_images={
+        Object {
+          "landscape": "landscape",
+          "square": "square",
+        }
+      }
+      featured={false}
+      key="event-card-1"
+      lineup={Array []}
+      location={
+        Object {
+          "city": "city",
+          "country": "country",
+        }
+      }
+      name="name"
+      sale_start_date="2019-08-19"
+      sold_out={false}
+      spotify_tracks={Array []}
+      ticket_types={
+        Array [
+          Object {
+            "price": Object {
+              "total": 800,
+            },
+          },
+          Object {
+            "price": Object {
+              "total": 400,
+            },
+          },
+        ]
+      }
+      url="url"
+      venue="venue"
+    />
+  </div>
+</Fragment>
+`;

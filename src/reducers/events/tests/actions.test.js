@@ -14,9 +14,12 @@ describe('Events actions / thunks', () => {
     })
 
     it('setEvents', () => {
-        expect(setEvents(['events'])).toEqual({
+        expect(setEvents(['events'], 'link')).toEqual({
             type: ACTIONS_NAME.SET_EVENTS,
-            events: ['events']
+            payload: { 
+                events: ['events'],
+                links: 'link' 
+            }
         })
     })
 
@@ -41,8 +44,8 @@ describe('Events actions / thunks', () => {
 
     it('fetchEvents', async () => {
         const dispatch = jest.fn();
-        await fetchEvents('xoyo')(dispatch);
+        await fetchEvents('xoyo')(dispatch, () => ({ events: { links: { next: 'url' }}}));
         expect(dispatch).toBeCalledWith({ type: ACTIONS_NAME.SET_LOADING, isLoading: true });
-        expect(dispatch).toBeCalledWith({ type: ACTIONS_NAME.SET_EVENTS, events: ['events'] });
+        expect(dispatch).toBeCalledWith({ type: ACTIONS_NAME.SET_EVENTS, payload: { events: ['events'] } });
     })
 })

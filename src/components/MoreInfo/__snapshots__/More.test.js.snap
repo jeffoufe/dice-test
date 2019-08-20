@@ -8,6 +8,7 @@ exports[`MoreInfo renders correctly 1`] = `
     More info
     <div
       className="expand"
+      onClick={[Function]}
     >
       +
     </div>

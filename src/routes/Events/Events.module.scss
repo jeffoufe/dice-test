@@ -1,0 +1,28 @@
+@import '../../constants/_breakpoints';
+
+.loading-container {
+    text-align: center;
+}
+
+.container {
+    padding: 60px 30px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 90px 0 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+    }
+}
+
+.error {
+    margin-top: 30px;
+}
+
+.load-more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+}

@@ -1,8 +1,6 @@
 import { PureHome } from './Home';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
-import { act } from 'react-dom/test-utils';
-
 
 describe('Home', () => {
     const props = {
@@ -10,9 +8,27 @@ describe('Home', () => {
             push: jest.fn()
         }
     };
-    const wrapper = mount(<PureHome {...props} />);
+    const wrapper = shallow(<PureHome {...props} />);
 
     it('renders correctly', () => {
         expect(wrapper).toMatchSnapshot();
     });
+
+    it('right callbacks', () => {
+        const inputProps = wrapper.find('input').props();
+        inputProps.onChange({ target: { value: 'xoyo' }});
+        setTimeout(() => {
+            inputProps.onKeyDown({ keyCode: 48 });
+            expect(props.history.push).not.toHaveBeenCalled();
+
+            wrapper.find('Button').props().onClick();
+            expect(props.history.push).toHaveBeenCalledWith('/events?venue=xoyo')
+
+            inputProps.onChange({ target: { value: 'xoyo2' }});
+            setTimeout(() => {
+                inputProps.onKeyDown({ keyCode: 13 });
+                expect(props.history.push).toHaveBeenCalledWith('/events?venue=xoyo2')
+            }, 1000)
+        }, 1000)
+    })
 })

@@ -5,15 +5,20 @@ import fetchAPI from '../../utils/fetchAPI';
 import api from '../../constants/api';
 
 import type { Dispatch } from 'redux';
+import type { EventsState } from './reducer';
+
+type Links = {
+    next: string
+}
 
 export const setLoading = (isLoading: boolean) => ({
     type: ACTIONS_NAME.SET_LOADING,
     isLoading
 });
 
-export const setEvents = (events: Array<Object>) => ({
+export const setEvents = (events: Array<Object>, links: Links) => ({
     type: ACTIONS_NAME.SET_EVENTS,
-    events
+    payload: { links, events }
 });
 
 export const setError = (error: string) => ({
@@ -30,15 +35,16 @@ export const reset = () => ({
 });
 
 export const fetchEvents = (venue: string) => 
-    async (dispatch: Dispatch) => {
+    async (dispatch: Dispatch, getState: () => EventsState) => {
         dispatch(setLoading(true));
+        const { events: { links: { next } } } = getState();
         const response = await fetchAPI(
-            api.events, 
+            next || api.events, 
             'GET',
-            {
+            next ? {} : {
                 'filter[venues]': venue,
                 'page[size]': 12
             }
         );
-        dispatch(setEvents(response.data.data));
+        dispatch(setEvents(response.data.data, response.data.links));
     }

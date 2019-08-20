@@ -10,6 +10,7 @@ export const ACTIONS_NAME = Object.freeze({
 
 export const INITIAL_STATE = Object.freeze({
     events: [],
+    links: {},
     error: '',
     isLoading: true,
     willFetchEvents: true,

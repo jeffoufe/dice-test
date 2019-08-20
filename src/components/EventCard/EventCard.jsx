@@ -14,7 +14,7 @@ import moment from 'moment';
 import type { LineUp } from '../../models/LineUp';
 import type { Ticket } from '../../models/Ticket';
 
-type EventCardProps = {
+export type EventCardProps = {
     event_images: {
         landscape: string,
         square: string
@@ -28,6 +28,8 @@ type EventCardProps = {
     name: string,
     venue: string,
     description: string,
+    sold_out: boolean,
+    url: string,
     lineup: LineUp,
     currency: string,
     location: {
@@ -39,11 +41,13 @@ type EventCardProps = {
 const EventCard = (props: EventCardProps) => {
     const eventDate = moment(props.date);
     const isNotOnSaleYet = moment(props.sale_start_date).isAfter(moment());
-    const allSoldOut = props.ticket_types.every((ticket: Ticket) => ticket.sold_out);
+
+    const sortedTicketTypes = props.ticket_types.sort((ticketA: Ticket, ticketB: Ticket) => ticketA.price.total - ticketB.price.total);
+    
     return (
         <div className={styles.container}>
             <div className={styles['image-container']}>
-                <img src={props.event_images.landscape} className={`${styles.image} ${styles['image-landscape']}`} alt='Event Logo' />
+                <img src={props.event_images['square']} className={`${styles.image} ${styles['image-landscape']}`} alt='Event Logo' />
                 {!!(props.apple_music_tracks.length || props.spotify_tracks.length) && <PlayButton />}
                 {props.featured && <Featured />}
                 {isNotOnSaleYet && <OnSaleDate date={props['sale_start_date']} />}
@@ -55,15 +59,19 @@ const EventCard = (props: EventCardProps) => {
                 {eventDate.format('LT')}
             </Text>
 
-            <h2 className={styles.name}>{props.name}</h2>
-            <ImportantText className={styles.venue}>{props.venue}</ImportantText>
-            <Text className={styles.city}>{`${props.location.city}, ${props.location.country}`}</Text>
+            <div className={styles.general}>
+                <h2 className={styles.name}>
+                    <a href={props.url} target='_blank'>{props.name}</a>
+                </h2>
+                <ImportantText className={styles.venue}>{props.venue}</ImportantText>
+                <Text className={styles.city}>{`${props.location.city}, ${props.location.country}`}</Text>
+            </div>
 
             <MoreInfo {...props} />
 
             <div className={styles.actions}>
-                <Button theme={allSoldOut ? 'disabled' : 'blue'}>
-                    {allSoldOut 
+                <Button theme={props['sold_out'] ? 'disabled' : 'blue'}>
+                    {props['sold_out'] 
                         ? 'Sold out'
                         : isNotOnSaleYet 
                             ? 'Get reminded' 
@@ -76,7 +84,7 @@ const EventCard = (props: EventCardProps) => {
                            From
                         </div>
                     )}
-                    <div className={styles['price-value']}>{buildPrice(props.currency, props.ticket_types[0].price.total)}</div>
+                    <div className={styles['price-value']}>{buildPrice(props.currency, sortedTicketTypes[0].price.total)}</div>
                 </div>
             </div>
         </div>

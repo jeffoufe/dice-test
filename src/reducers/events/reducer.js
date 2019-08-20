@@ -6,7 +6,10 @@ export type EventsState = {
     isLoading: boolean,
     willFetchEvents: boolean,
     error: string,
-    events: Object
+    events: Object,
+    links: {
+        next?: string
+    }
 }
 
 export default (state: EventsState = INITIAL_STATE, action: Object) => {
@@ -25,7 +28,8 @@ export default (state: EventsState = INITIAL_STATE, action: Object) => {
         case ACTIONS_NAME.SET_EVENTS:
             return {
                 ...state,
-                events: [...state.events, ...action.events],
+                events: [...state.events, ...action.payload.events],
+                links: action.payload.links,
                 isLoading: false,
             }
         case ACTIONS_NAME.SET_ERROR:

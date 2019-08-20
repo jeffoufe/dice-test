@@ -5,10 +5,11 @@
     margin-top: 10px;
     background-color: $grey;
     overflow: hidden;
-    // height: 19px;
+    height: 19px;
     transition: height 2s;
 
-    &-expanded {
+    &-open {
+        @extend .container;
         height: auto;
     }
 }

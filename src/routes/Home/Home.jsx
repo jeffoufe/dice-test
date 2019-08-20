@@ -15,6 +15,12 @@ type PureHomeProps = {
 export const PureHome = ({ history }: PureHomeProps) => {
     const [search, setSearch] = useState('');
 
+    const goToEvents = (search: string) => {
+        if (search) {
+            history.push(`/events?venue=${search}`);
+        }
+    };
+
     return (
         <div className={styles.container}>
             <img 
@@ -28,15 +34,16 @@ export const PureHome = ({ history }: PureHomeProps) => {
                     value={search} 
                     className={styles['search-input']}
                     placeholder='Enter a venue...'
+                    onKeyDown={(e) => {
+                        if (e.keyCode === 13) {
+                            goToEvents(search);
+                        }
+                    }}
                 />
                 <Button
                     theme='dark'
                     align='right'
-                    onClick={() => {
-                        if (search) {
-                            history.push(`/events?venue=${search}`)}
-                        }
-                    }
+                    onClick={() => goToEvents(search)}
                 >
                     SEARCH
                 </Button>

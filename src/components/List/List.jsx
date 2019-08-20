@@ -1,13 +1,13 @@
+// @flow
+
 import React from 'react';
 import styles from './List.module.scss';
 import { BlueHeader, ImportantText, Text, GreyHeader } from '../../components/Typography/Typography';
 
-// @flow
-
 type ListEntryProps = {
     primary: string,
     secondary?: string,
-    tertiary?: string
+    tertiary?: boolean
 };
 
 type ListProps = {

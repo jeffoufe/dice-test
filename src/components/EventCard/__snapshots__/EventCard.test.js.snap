@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventCard Not sold out, not featured 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="Event Logo"
+      className="image image-landscape"
+      src="square"
+    />
+  </div>
+  <Text
+    className="date"
+  >
+    Invalid date
+    －
+    Invalid date
+  </Text>
+  <div
+    className="general"
+  >
+    <h2
+      className="name"
+    >
+      <a
+        href="url"
+        target="_blank"
+      >
+        name
+      </a>
+    </h2>
+    <ImportantText
+      className="venue"
+    >
+      venue
+    </ImportantText>
+    <Text
+      className="city"
+    >
+      city, country
+    </Text>
+  </div>
+  <MoreInfo
+    apple_music_tracks={Array []}
+    currency="GBP"
+    date="date"
+    description="description"
+    event_images={
+      Object {
+        "landscape": "landscape",
+        "square": "square",
+      }
+    }
+    featured={false}
+    lineup={Array []}
+    location={
+      Object {
+        "city": "city",
+        "country": "country",
+      }
+    }
+    name="name"
+    sale_start_date="2019-08-19"
+    sold_out={false}
+    spotify_tracks={Array []}
+    ticket_types={
+      Array [
+        Object {
+          "price": Object {
+            "total": 400,
+          },
+        },
+        Object {
+          "price": Object {
+            "total": 800,
+          },
+        },
+      ]
+    }
+    url="url"
+    venue="venue"
+  />
+  <div
+    className="actions"
+  >
+    <Button
+      theme="blue"
+    >
+      Book now
+    </Button>
+    <div
+      className="price"
+    >
+      <div
+        className="price-from"
+      >
+        From
+      </div>
+      <div
+        className="price-value"
+      >
+        £4
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EventCard not on sale yet 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="Event Logo"
+      className="image image-landscape"
+      src="square"
+    />
+    <OnSaleDate
+      date="2089-08-19"
+    />
+  </div>
+  <Text
+    className="date"
+  >
+    Invalid date
+    －
+    Invalid date
+  </Text>
+  <div
+    className="general"
+  >
+    <h2
+      className="name"
+    >
+      <a
+        href="url"
+        target="_blank"
+      >
+        name
+      </a>
+    </h2>
+    <ImportantText
+      className="venue"
+    >
+      venue
+    </ImportantText>
+    <Text
+      className="city"
+    >
+      city, country
+    </Text>
+  </div>
+  <MoreInfo
+    apple_music_tracks={Array []}
+    currency="GBP"
+    date="date"
+    description="description"
+    event_images={
+      Object {
+        "landscape": "landscape",
+        "square": "square",
+      }
+    }
+    featured={false}
+    lineup={Array []}
+    location={
+      Object {
+        "city": "city",
+        "country": "country",
+      }
+    }
+    name="name"
+    sale_start_date="2089-08-19"
+    sold_out={false}
+    spotify_tracks={Array []}
+    ticket_types={
+      Array [
+        Object {
+          "price": Object {
+            "total": 400,
+          },
+        },
+        Object {
+          "price": Object {
+            "total": 800,
+          },
+        },
+      ]
+    }
+    url="url"
+    venue="venue"
+  />
+  <div
+    className="actions"
+  >
+    <Button
+      theme="blue"
+    >
+      Get reminded
+    </Button>
+    <div
+      className="price"
+    >
+      <div
+        className="price-from"
+      >
+        From
+      </div>
+      <div
+        className="price-value"
+      >
+        £4
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EventCard not sold out, featured 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="Event Logo"
+      className="image image-landscape"
+      src="square"
+    />
+    <Featured />
+  </div>
+  <Text
+    className="date"
+  >
+    Invalid date
+    －
+    Invalid date
+  </Text>
+  <div
+    className="general"
+  >
+    <h2
+      className="name"
+    >
+      <a
+        href="url"
+        target="_blank"
+      >
+        name
+      </a>
+    </h2>
+    <ImportantText
+      className="venue"
+    >
+      venue
+    </ImportantText>
+    <Text
+      className="city"
+    >
+      city, country
+    </Text>
+  </div>
+  <MoreInfo
+    apple_music_tracks={Array []}
+    currency="GBP"
+    date="date"
+    description="description"
+    event_images={
+      Object {
+        "landscape": "landscape",
+        "square": "square",
+      }
+    }
+    featured={true}
+    lineup={Array []}
+    location={
+      Object {
+        "city": "city",
+        "country": "country",
+      }
+    }
+    name="name"
+    sale_start_date="2019-08-19"
+    sold_out={false}
+    spotify_tracks={Array []}
+    ticket_types={
+      Array [
+        Object {
+          "price": Object {
+            "total": 400,
+          },
+        },
+        Object {
+          "price": Object {
+            "total": 800,
+          },
+        },
+      ]
+    }
+    url="url"
+    venue="venue"
+  />
+  <div
+    className="actions"
+  >
+    <Button
+      theme="blue"
+    >
+      Book now
+    </Button>
+    <div
+      className="price"
+    >
+      <div
+        className="price-from"
+      >
+        From
+      </div>
+      <div
+        className="price-value"
+      >
+        £4
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EventCard sold out, not featured 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="Event Logo"
+      className="image image-landscape"
+      src="square"
+    />
+  </div>
+  <Text
+    className="date"
+  >
+    Invalid date
+    －
+    Invalid date
+  </Text>
+  <div
+    className="general"
+  >
+    <h2
+      className="name"
+    >
+      <a
+        href="url"
+        target="_blank"
+      >
+        name
+      </a>
+    </h2>
+    <ImportantText
+      className="venue"
+    >
+      venue
+    </ImportantText>
+    <Text
+      className="city"
+    >
+      city, country
+    </Text>
+  </div>
+  <MoreInfo
+    apple_music_tracks={Array []}
+    currency="GBP"
+    date="date"
+    description="description"
+    event_images={
+      Object {
+        "landscape": "landscape",
+        "square": "square",
+      }
+    }
+    featured={false}
+    lineup={Array []}
+    location={
+      Object {
+        "city": "city",
+        "country": "country",
+      }
+    }
+    name="name"
+    sale_start_date="2019-08-19"
+    sold_out={true}
+    spotify_tracks={Array []}
+    ticket_types={
+      Array [
+        Object {
+          "price": Object {
+            "total": 400,
+          },
+        },
+        Object {
+          "price": Object {
+            "total": 800,
+          },
+        },
+      ]
+    }
+    url="url"
+    venue="venue"
+  />
+  <div
+    className="actions"
+  >
+    <Button
+      theme="disabled"
+    >
+      Sold out
+    </Button>
+    <div
+      className="price"
+    >
+      <div
+        className="price-from"
+      >
+        From
+      </div>
+      <div
+        className="price-value"
+      >
+        £4
+      </div>
+    </div>
+  </div>
+</div>
+`;

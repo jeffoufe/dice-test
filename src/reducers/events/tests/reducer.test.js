@@ -19,9 +19,10 @@ describe('Events reducer', () => {
     });
 
     it('setEvents', () => {
-        expect(eventsReducer(INITIAL_STATE, setEvents(['events']))).toEqual({
+        expect(eventsReducer(INITIAL_STATE, setEvents(['events'], 'link'))).toEqual({
             ...INITIAL_STATE,
             events: ['events'],
+            links: 'link',
             isLoading: false
         })
     });
