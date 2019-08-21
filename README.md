@@ -28,6 +28,7 @@
 ## Improvements to make
 
 - UI doesn't look great when 5 event cards per line displayed
+- Infinite scroll
 - Create an API reducer to factor API calls' states (loading, data, error)
 - Autocompletion for the search input
 	- Previous searches
