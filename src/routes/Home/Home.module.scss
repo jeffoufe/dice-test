@@ -1,37 +1,33 @@
 @import '../../constants/colors';
 
-.container {
-    padding-top: 20vh;
-    text-align: center;
-}
-
-.logo {
-    width: 200px;
-}
-
-.search {
+.home {
     &-container {
-        display: block;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        max-width: 1000px;
-        width: 70vw;
+        padding-top: 20vh;
+        text-align: center;
     }
 
-    &-input {
-        border: 1px solid $black;
-        outline: none;
-        font-size: 20px;
-        height: 40px;
-        width: 100%;
-        margin: 10px 0 20px;;
-        padding-left: 20px;
-        box-sizing: border-box;
+    &-logo {
+        width: 200px;
     }
 
-    &-button {
-        background-color: black;
-        color: white;
-        padding: 10 20px;
+    &-search {
+        &-container {
+            display: block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            max-width: 1000px;
+            width: 70vw;
+        }
+    
+        &-input {
+            border: 1px solid $black;
+            outline: none;
+            font-size: 20px;
+            height: 40px;
+            width: 100%;
+            margin: 10px 0 20px;;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
     }
 }

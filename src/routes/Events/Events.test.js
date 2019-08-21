@@ -52,7 +52,10 @@ describe('Events', () => {
     })
 
     it('good elements', () => {
-        expect(wrapper.find('EventCard').length).toEqual(2);
+        const eventsCards = wrapper.find('EventCard');
+        expect(eventsCards.length).toEqual(2);
+        expect(eventsCards.at(0).props().featured).toEqual(true);
+
         wrapper.setProps({
             events: {
                 ...props.events,

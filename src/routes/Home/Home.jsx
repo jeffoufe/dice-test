@@ -22,17 +22,17 @@ export const PureHome = ({ history }: PureHomeProps) => {
     };
 
     return (
-        <div className={styles.container}>
+        <div className={styles['home-container']}>
             <img 
                 src={LogoLight} 
                 alt='logo-light' 
-                className={styles.logo} 
+                className={styles['home-logo']} 
             />
-            <div className={styles['search-container']}>
+            <div className={styles['home-search-container']}>
                 <input 
                     onChange={(e) => setSearch(e.target.value)} 
                     value={search} 
-                    className={styles['search-input']}
+                    className={styles['home-search-input']}
                     placeholder='Enter a venue...'
                     onKeyDown={(e) => {
                         if (e.keyCode === 13) {

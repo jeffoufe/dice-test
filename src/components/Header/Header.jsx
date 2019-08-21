@@ -34,7 +34,7 @@ export const Header = ({ history, reset, fetchEvents, location }: HeaderProps) =
     }
 
     return (
-        <header className={styles.container}>
+        <header className={styles['header-container']}>
             <img 
                 src={logo} 
                 alt='header-logo' 

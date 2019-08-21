@@ -1,21 +1,23 @@
 @import "../../constants/colors";
 
-.container {
-    width: 168px;
-    height: 23px;
-    padding: 2px 5px 4px;
-    font-weight: 600;
-    position: absolute;
-    right: 17px;
-    bottom: 17px;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    color: white;
-    background-color: $black;
-}
+.on-sale {
+    &-container {
+        width: 168px;
+        height: 23px;
+        padding: 2px 5px 4px;
+        font-weight: 600;
+        position: absolute;
+        right: 17px;
+        bottom: 17px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: white;
+        background-color: $black;
+    }
 
-.date {
-    display: inline-block;
-    vertical-align: -webkit-baseline-middle;
+    &-date {
+        display: inline-block;
+        vertical-align: -webkit-baseline-middle;
+    }
 }

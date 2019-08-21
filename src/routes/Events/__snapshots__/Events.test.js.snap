@@ -4,7 +4,7 @@ exports[`Events renders correctly 1`] = `
 <Fragment>
   <Connect(withRouter(Header)) />
   <div
-    className="container"
+    className="events-container"
   >
     <EventCard
       apple_music_tracks={Array []}
@@ -17,7 +17,7 @@ exports[`Events renders correctly 1`] = `
           "square": "square",
         }
       }
-      featured={false}
+      featured={true}
       key="event-card-0"
       lineup={Array []}
       location={

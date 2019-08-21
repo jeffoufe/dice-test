@@ -2,19 +2,19 @@
 
 exports[`MoreInfo renders correctly 1`] = `
 <div
-  className="container"
+  className="more-info-container"
 >
   <ImportantText>
     More info
     <div
-      className="expand"
+      className="more-info-expand"
       onClick={[Function]}
     >
       +
     </div>
   </ImportantText>
   <Text
-    className="description"
+    className="more-info-description"
   >
     description
   </Text>

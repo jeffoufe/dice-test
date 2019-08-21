@@ -2,7 +2,7 @@
 
 exports[`Featured renders correctly 1`] = `
 <div
-  className="container"
+  className="play-container"
 >
   <div
     className="play-button"

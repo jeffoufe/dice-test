@@ -2,10 +2,10 @@
 
 exports[`Featured renders correctly 1`] = `
 <div
-  className="container"
+  className="featured-container"
 >
   <div
-    className="featured"
+    className="featured-text"
   >
     featured
   </div>

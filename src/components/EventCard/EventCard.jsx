@@ -24,6 +24,7 @@ export type EventCardProps = {
     ticket_types: Array<Ticket>,
     featured: boolean,
     sale_start_date: string,
+    featured: boolean,
     date: string,
     name: string,
     venue: string,
@@ -45,31 +46,31 @@ const EventCard = (props: EventCardProps) => {
     const sortedTicketTypes = props.ticket_types.sort((ticketA: Ticket, ticketB: Ticket) => ticketA.price.total - ticketB.price.total);
     
     return (
-        <div className={styles.container}>
-            <div className={styles['image-container']}>
-                <img src={props.event_images['square']} className={`${styles.image} ${styles['image-landscape']}`} alt='Event Logo' />
+        <div className={styles['event-card-container']}>
+            <div className={styles['event-card-image-container']}>
+                <img src={props.event_images[props.featured ? 'landscape' : 'square']} className={styles['event-card-image']} alt={props.name} />
                 {!!(props.apple_music_tracks.length || props.spotify_tracks.length) && <PlayButton />}
                 {props.featured && <Featured />}
                 {isNotOnSaleYet && <OnSaleDate date={props['sale_start_date']} />}
             </div>
 
-            <Text className={styles.date}>
+            <Text className={styles['event-card-date']}>
                 {eventDate.format('ddd D MMM')} 
                 &#65293;
                 {eventDate.format('LT')}
             </Text>
 
-            <div className={styles.general}>
-                <h2 className={styles.name}>
-                    <a href={props.url} target='_blank'>{props.name}</a>
+            <div className={styles['event-card-general-info']}>
+                <h2 className={styles['event-card-name']}>
+                    <a href={props.url} target='_blank' rel="noopener noreferrer">{props.name}</a>
                 </h2>
-                <ImportantText className={styles.venue}>{props.venue}</ImportantText>
-                <Text className={styles.city}>{`${props.location.city}, ${props.location.country}`}</Text>
+                <ImportantText>{props.venue}</ImportantText>
+                <Text>{`${props.location.city}, ${props.location.country}`}</Text>
             </div>
 
             <MoreInfo {...props} />
 
-            <div className={styles.actions}>
+            <div className={styles['event-card-actions']}>
                 <Button theme={props['sold_out'] ? 'disabled' : 'blue'}>
                     {props['sold_out'] 
                         ? 'Sold out'
@@ -78,13 +79,13 @@ const EventCard = (props: EventCardProps) => {
                             : 'Book now'
                     }
                 </Button>
-                <div className={styles.price}>
+                <div className={styles['event-card-price']}>
                     {props.ticket_types.length > 1 && (
-                        <div className={styles['price-from']}>
+                        <div className={styles['event-card-price-from']}>
                            From
                         </div>
                     )}
-                    <div className={styles['price-value']}>{buildPrice(props.currency, sortedTicketTypes[0].price.total)}</div>
+                    <div className={styles['event-card-price-value']}>{buildPrice(props.currency, sortedTicketTypes[0].price.total)}</div>
                 </div>
             </div>
         </div>

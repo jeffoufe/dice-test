@@ -1,44 +1,46 @@
 @import '../../constants/breakpoints';
 
-.container {
-    height: 90px;
-    text-align: left;
-    position: fixed;
-    width: 100vw;
-    z-index: 2;
-    background: white;
-
-    > img {
-        position: absolute;
-        left: 5px;
+.header {
+    &-container {
         height: 90px;
-        cursor: pointer;
+        text-align: left;
+        position: fixed;
+        width: 100vw;
+        z-index: 2;
+        background: white;
 
-        @media screen and (min-width: $tablet) {
-            left: calc(50% - 45px);
+        > img {
+            position: absolute;
+            left: 5px;
+            height: 90px;
+            cursor: pointer;
+
+            @media screen and (min-width: $tablet) {
+                left: calc(50% - 45px);
+            }
         }
-    }
 
-    > div {
-        position: absolute;
-        right: 30px;
-        top: 45px;
-        max-width: 200px;
-        width: 50%;
+        > div {
+            position: absolute;
+            right: 30px;
+            top: 45px;
+            max-width: 200px;
+            width: 50%;
 
-        @media screen and (min-width: $tablet) {
-            left: 35px;
-        }
+            @media screen and (min-width: $tablet) {
+                left: 35px;
+            }
 
-        > input {
-            width: calc(100% - 35px);
-            font-size: 14px;
-            border: none;
-            outline: none;
-            margin-left: 15px;
-            border-bottom: 1px solid black;
-            vertical-align: text-bottom;
-            display: inline-block;
+            > input {
+                width: calc(100% - 35px);
+                font-size: 14px;
+                border: none;
+                outline: none;
+                margin-left: 15px;
+                border-bottom: 1px solid black;
+                vertical-align: text-bottom;
+                display: inline-block;
+            }
         }
     }
 }

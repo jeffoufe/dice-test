@@ -1,72 +1,71 @@
 @import '../../constants/_colors';
 @import '../../constants/_breakpoints';
 
-.container {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 30px;
+.event-card {
+    &-container{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 30px;
 
-    @media screen and (min-width: $tablet) {
-        width: 320px;
-        margin: 32px 24px;
-    }
-}
-
-.image-container {
-    position: relative;
-}
-
-@import '../../constants/breakpoints';
-
-.image {
-    width: 100%;
-}
-
-.date {
-    margin-top: 8px;
-}
-
-.general {
-    @media screen and (min-width: $tablet) {
-        height: 158px;
-    }
-}
-
-.name {
-    font-size: 28px;
-    line-height: 32px;
-    margin-top: 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-
-    > a {
-        color: $black;
-        text-decoration: none;
-    }
-}
-
-.actions {
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.price {
-    &-from {
-        color: $black;
-        opacity: 0.5;
-        margin-bottom: 5px;
-
-        + .price-value {
-            line-height: unset;
+        @media screen and (min-width: $tablet) {
+            width: 320px;
+            margin: 32px 24px;
         }
     }
 
-    &-value {
-        color: $black;
-        font-size: 32px;
-        line-height: 40px;
+    &-image {
+        width: 100%;
+
+        &-container {
+            position: relative;
+        }
+    }
+
+    &-date {
+        margin-top: 8px;
+    }
+
+    &-general-info {
+        @media screen and (min-width: $tablet) {
+            height: 158px;
+        }
+    }
+
+    &-name {
+        font-size: 28px;
+        line-height: 32px;
+        margin-top: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        > a {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+
+    &-actions {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-price {
+        &-from {
+            color: $black;
+            opacity: 0.5;
+    
+            + .price-value {
+                line-height: unset;
+            }
+        }
+    
+        &-value {
+            color: $black;
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 }

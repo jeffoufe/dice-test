@@ -1,26 +1,28 @@
 @import '../../constants/colors';
 
-.container {
-    padding: 11px 16px;
-    margin-top: 10px;
-    background-color: $grey;
-    overflow: hidden;
-    height: 19px;
-    transition: height 2s;
+.more-info {
+    &-container {
+        padding: 11px 16px;
+        margin-top: 10px;
+        background-color: $grey;
+        overflow: hidden;
+        height: 19px;
+        transition: height 2s;
 
-    &-open {
-        @extend .container;
-        height: auto;
+        &-open {
+            @extend .more-info-container;
+            height: auto;
+        }
     }
-}
 
-.expand {
-    float: right;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: 500;
-}
+    &-expand {
+        float: right;
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: 500;
+    }
 
-.description {
-    margin-top: 15px;
+    &-description {
+        margin-top: 15px;
+    }
 }

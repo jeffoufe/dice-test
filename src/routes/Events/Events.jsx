@@ -28,28 +28,31 @@ type PureEventsProps = {
 export const PureEvents = ({ location, fetchEvents, reset, triggerFetch, events: { events, willFetchEvents, isLoading, links, error } }: PureEventsProps) => {
     const venue = qs.parse(location.search.substring(1)).venue;
 
+    // Fetch events on loading or when load more is clicked
     useEffect(() => {
         if (willFetchEvents) {
             fetchEvents(venue);
         }
     })
 
+    // Resets the reducer when the component is being unmounted
     useEffect(() => {
         return () => {
           reset();
         }
-    }, []);
+    }, [reset]);
 
     return venue
         ? (
             <Fragment>
                 <Header />
-                <div className={styles.container}>
+                <div className={styles['events-container']}>
+                    {/* We set the first event card as featured */}
                     {!!events.length && events.map((event: EventCardProps, index: number) => 
-                        <EventCard {...event} key={`event-card-${index}`} />
+                        <EventCard {...event} key={`event-card-${index}`} featured={index === 0} />
                     )}
                     {!events.length && !isLoading && (
-                        <div className={styles.error} id='error'>
+                        <div className={styles['events-error']} id='error'>
                             {error || 'No results... Please try again with another venue'}
                         </div>
                     )}
@@ -57,13 +60,13 @@ export const PureEvents = ({ location, fetchEvents, reset, triggerFetch, events:
                 {!!events.length && !isLoading && links.next && (
                     <Button 
                         theme='dark' 
-                        className={styles['load-more']} 
-                        onClick={() => triggerFetch()}
+                        className={styles['events-load-more']} 
+                        onClick={triggerFetch}
                     >
                         Load more
                     </Button>
                 )}
-                {isLoading && <div className={styles['loading-container']}>
+                {isLoading && <div className={styles['events-loading']}>
                     <Loading />
                 </div>}
             </Fragment>

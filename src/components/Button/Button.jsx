@@ -13,7 +13,7 @@ type ButtonProps = {
 
 const Button = ({ children, theme, onClick, align, className }: ButtonProps) => {
     const themeClassName = `button-${theme || 'blue'}`;
-    const alignClassName = align === 'right' ? styles.right : '';
+    const alignClassName = align === 'right' ? styles['button-right'] : '';
     return (
         <button
             className={`${styles[themeClassName]} ${alignClassName} ${className || ''}`}

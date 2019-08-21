@@ -2,10 +2,10 @@
 
 exports[`OnSaleDate renders correctly 1`] = `
 <div
-  className="container"
+  className="on-sale-container"
 >
   <div
-    className="date"
+    className="on-sale-date"
   >
     On sale 19 Aug 9:54 PM
   </div>

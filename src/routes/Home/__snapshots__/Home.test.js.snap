@@ -2,18 +2,18 @@
 
 exports[`Home renders correctly 1`] = `
 <div
-  className="container"
+  className="home-container"
 >
   <img
     alt="logo-light"
-    className="logo"
+    className="home-logo"
     src="logo-light.png"
   />
   <div
-    className="search-container"
+    className="home-search-container"
   >
     <input
-      className="search-input"
+      className="home-search-input"
       onChange={[Function]}
       onKeyDown={[Function]}
       placeholder="Enter a venue..."

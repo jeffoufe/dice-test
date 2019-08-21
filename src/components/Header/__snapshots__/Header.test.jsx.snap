@@ -2,7 +2,7 @@
 
 exports[`Header renders correctly 1`] = `
 <header
-  className="container"
+  className="header-container"
 >
   <img
     alt="header-logo"

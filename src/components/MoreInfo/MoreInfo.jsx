@@ -11,13 +11,14 @@ import type { LineUp, LineUpEntry } from '../../models/LineUp';
 
 type MoreInfoProps = {
     description: string,
+    featured: boolean,
     lineup: LineUp,
     ticket_types: Array<Ticket>,
     currency: string
 };
 
-const MoreInfo = ({ description, lineup, ticket_types, currency }: MoreInfoProps) => {
-    const [isOpen, setIsOpen] = useState(false);
+const MoreInfo = ({ description, lineup, ticket_types, currency, featured }: MoreInfoProps) => {
+    const [isOpen, setIsOpen] = useState(featured);
 
     const lineupList = lineup.map((lineupEntry: LineUpEntry) => ({
         primary: lineupEntry.details,
@@ -31,12 +32,12 @@ const MoreInfo = ({ description, lineup, ticket_types, currency }: MoreInfoProps
     }));
 
     return (
-        <div className={styles[isOpen ? 'container-open' : 'container']}>
+        <div className={styles[isOpen ? 'more-info-container-open' : 'more-info-container']}>
             <ImportantText>
                 More info
-                <div className={styles.expand} onClick={() => setIsOpen(!isOpen)}>+</div>
+                <div className={styles['more-info-expand']} onClick={() => setIsOpen(!isOpen)}>+</div>
             </ImportantText>
-            <Text className={styles.description}>{description}</Text>
+            <Text className={styles['more-info-description']}>{description}</Text>
             <List title='line up' list={lineupList} />
             <List title='tickets' list={ticketsList} />
         </div>

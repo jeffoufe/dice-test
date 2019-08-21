@@ -1,22 +1,24 @@
 @import "../../constants/colors";
 
-.container {
-    width: 81px;
-    padding: 2px 5px 4px;
-    font-weight: 600;
-    position: absolute;
-    height: 23px;
-    right: 17px;
-    bottom: 17px;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: white;
-    background-color: $blue;
-}
-
 .featured {
-    display: inline-block;
-    vertical-align: -webkit-baseline-middle;
+    &-container {
+        width: 81px;
+        padding: 2px 5px 4px;
+        font-weight: 600;
+        position: absolute;
+        height: 23px;
+        right: 17px;
+        bottom: 17px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: white;
+        background-color: $blue;
+    }
+
+    &-text {
+        display: inline-block;
+        vertical-align: -webkit-baseline-middle;
+    }
 }

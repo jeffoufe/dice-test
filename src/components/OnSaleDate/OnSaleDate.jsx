@@ -9,8 +9,8 @@ type OnSaleDateProps = {
 }
 
 const OnSaleDate = ({ date }: OnSaleDateProps) => (
-    <div className={styles.container}>
-        <div className={styles.date}>
+    <div className={styles['on-sale-container']}>
+        <div className={styles['on-sale-date']}>
             {`On sale ${moment(date).format('D MMM LT')}`}
         </div>
     </div>
